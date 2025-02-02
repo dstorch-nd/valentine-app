@@ -10,7 +10,10 @@ def main():
 
     if not st.session_state.valentine:
         #st.markdown("<div style='text-align: center;'><img src='snoopy-hugging-woodstock.jpg' width='400'></div>", unsafe_allow_html=True)
-        st.image("snoopy-hugging-woodstock.jpg", width = 400)
+        st.markdown("<div style='text-align: center;'>" + 
+                    st.image("snoopy-hugging-woodstock.jpg", width=400) + 
+                    "</div>", unsafe_allow_html=True)
+        #st.image("snoopy-hugging-woodstock.jpg", width = 400)
         #st.title("Claire, will you be my Valentine?")
         st.markdown("<h1 style='text-align: center;'>Claire, will you be my Valentine?</h1>", unsafe_allow_html=True)
 
