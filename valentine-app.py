@@ -11,7 +11,7 @@ def main():
     if not st.session_state.valentine:
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2:
-            st.image("snoopy-hugging-woodstock.jpg", width=400)
+            st.image("snoopy-hugging-woodstock.jpg", width=285)
         st.markdown("<h1 style='text-align: center;'>Claire, will you be my Valentine?</h1>", unsafe_allow_html=True)
 
         button_style = """
