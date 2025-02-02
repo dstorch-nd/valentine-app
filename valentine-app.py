@@ -9,14 +9,15 @@ def main():
         st.session_state.valentine = False
 
     if not st.session_state.valentine:
-        st.image("snoopy-hugging-woodstock.jpg", use_column_width=True)
-        st.title("Claire, will you be my Valentine?")
+        st.image("snoopy-hugging-woodstock.jpg", use_container_width=True)
+        #st.title("Claire, will you be my Valentine?")
+        st.markdown("<h1 style='text-align: center;'>Will you be my Valentine?</h1>", unsafe_allow_html=True)
         
-        col1, col2 = st.columns([1,1])
+        col1, col2 = st.columns([1,1], gap='large')
         with col1:
             if st.button("Yes 💖"):
                 st.session_state.valentine = True
-                st.experimental_rerun()
+                st.rerun()
         
         with col2:
             no_x, no_y = st.session_state.no_button_position
@@ -26,11 +27,12 @@ def main():
                 new_x = random.randint(0, 90)
                 new_y = random.randint(0, 90)
                 st.session_state.no_button_position = (new_x, new_y)
-                st.experimental_rerun()
+                st.rerun()
             
     else:
-        st.image("snoopy-cheering.jpg", use_column_width=True)
-        st.title("Yay! Happy Valentine's Day! 💕")
+        st.image("snoopy-cheering.jpg", use_container_width=True)
+        st.markdown("<h1 style='text-align: center;'>Yay! Happy Valentine's Day! 💕</h1>", unsafe_allow_html=True)
+        #st.title("Yay! Happy Valentine's Day! 💕")
         st.write("You made the right choice! 😊")
 
 if __name__ == "__main__":
