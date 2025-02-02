@@ -72,7 +72,10 @@ def main():
 
     else:
         #st.markdown("<div style='text-align: center;'><img src='snoopy-cheering.jpg' width='500'></div>", unsafe_allow_html=True)
-        st.image("snoopy-cheering.jpg", width = 500)
+        col1, col2, col3 = st.columns([1, 2, 1])  # 2 is the main column width
+        with col2:
+            st.image("snoopy-cheering.jpg", width = 500)
+        # st.image("snoopy-cheering.jpg", width = 500)
         st.markdown("<h1 style='text-align: center;'>Yay! Happy Valentine's Day! 💕</h1>", unsafe_allow_html=True)
         #st.title("Yay! Happy Valentine's Day! 💕")
         #st.write("You made the right choice! 😊")
