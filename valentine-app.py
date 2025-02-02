@@ -9,7 +9,7 @@ def main():
         st.session_state.valentine = False
 
     if not st.session_state.valentine:
-        st.image("snoopy-hugging-woodstock.jpg", width = 600)
+        st.image("snoopy-hugging-woodstock.jpg", width = 400)
         #st.title("Claire, will you be my Valentine?")
         st.markdown("<h1 style='text-align: center;'>Claire, will you be my Valentine?</h1>", unsafe_allow_html=True)
         
@@ -52,7 +52,7 @@ def main():
                 pass
 
     else:
-        st.image("snoopy-cheering.jpg", width = 600)
+        st.image("snoopy-cheering.jpg", width = 500)
         st.markdown("<h1 style='text-align: center;'>Yay! Happy Valentine's Day! 💕</h1>", unsafe_allow_html=True)
         #st.title("Yay! Happy Valentine's Day! 💕")
         #st.write("You made the right choice! 😊")
