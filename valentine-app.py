@@ -47,7 +47,7 @@ def main():
                 }
             </style>
         """
-        col1, col2, col3 = st.columns([1, 2, 1])  # Middle column is the widest
+        col1, col2, col3 = st.columns([2, 2, 1])  # Middle column is the widest
         with col2:
             if st.button("Yes 💖"):
                 st.session_state.valentine = True
