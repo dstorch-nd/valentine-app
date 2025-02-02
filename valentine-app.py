@@ -19,28 +19,56 @@ def main():
         
         st.markdown("<h1 style='text-align: center;'>Claire, will you be my Valentine?</h1>", unsafe_allow_html=True)
 
-        col = st.columns([1])[0]
-        with col:
-            # Increase the button size by applying a style
-            button_style = """
-                <style>
-                    .stButton button {
-                        font-size: 24px;
-                        padding: 20px;
-                    }
-                </style>
-            """
-            st.markdown(button_style, unsafe_allow_html=True)
+        #col = st.columns([1])[0]
+        #with col:
+            # # Increase the button size by applying a style
+            # button_style = """
+            #     <style>
+            #         .stButton button {
+            #             font-size: 24px;
+            #             padding: 20px;
+            #         }
+            #     </style>
+            # """
+            # st.markdown(button_style, unsafe_allow_html=True)
 
+        button_style = """
+            <style>
+                .stButton button {
+                    font-size: 24px;
+                    padding: 20px;
+                    width: 200px;
+                    margin: 10px;
+                }
+                .stButton {
+                    display: inline-block;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                }
+            </style>
+        """
+        col1, col2, col3 = st.columns([1, 2, 1])  # Middle column is the widest
+        with col2:
             if st.button("Yes 💖"):
                 st.session_state.valentine = True
                 st.rerun()
-        
+            
             no_x, no_y = st.session_state.no_button_position
             no_button = st.button("No ❌", key="no")
             
             if no_button:
                 pass
+        # st.markdown(button_style, unsafe_allow_html=True)
+
+        #     if st.button("Yes 💖"):
+        #         st.session_state.valentine = True
+        #         st.rerun()
+        
+        #     no_x, no_y = st.session_state.no_button_position
+        #     no_button = st.button("No ❌", key="no")
+            
+        #     if no_button:
+        #         pass
 
     else:
         #st.markdown("<div style='text-align: center;'><img src='snoopy-cheering.jpg' width='500'></div>", unsafe_allow_html=True)
