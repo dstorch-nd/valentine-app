@@ -9,7 +9,7 @@ def main():
         st.session_state.valentine = False
 
     if not st.session_state.valentine:
-        st.image("snoopy-hugging-woodstock.jpg", use_container_width=True)
+        st.image("snoopy-hugging-woodstock.jpg", width = 600)
         #st.title("Claire, will you be my Valentine?")
         st.markdown("<h1 style='text-align: center;'>Claire, will you be my Valentine?</h1>", unsafe_allow_html=True)
         
@@ -28,7 +28,7 @@ def main():
         #         new_y = random.randint(0, 90)
         #         st.session_state.no_button_position = (new_x, new_y)
         #         st.rerun()
-        col = st.columns([1], gap='large')[0]
+        col = st.columns([1])[0]
         with col:
             # Increase the button size by applying a style
             button_style = """
@@ -49,13 +49,10 @@ def main():
             no_button = st.button("No ❌", key="no")
             
             if no_button:
-                new_x = random.randint(0, 90)
-                new_y = random.randint(0, 90)
-                st.session_state.no_button_position = (new_x, new_y)
-                st.rerun()
+                pass
 
     else:
-        st.image("snoopy-cheering.jpg", use_container_width=True)
+        st.image("snoopy-cheering.jpg", width = 600)
         st.markdown("<h1 style='text-align: center;'>Yay! Happy Valentine's Day! 💕</h1>", unsafe_allow_html=True)
         #st.title("Yay! Happy Valentine's Day! 💕")
         #st.write("You made the right choice! 😊")
