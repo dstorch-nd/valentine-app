@@ -9,8 +9,8 @@ def main():
         st.session_state.valentine = False
 
     if not st.session_state.valentine:
-        st.image("valentine_photo.jpg", use_column_width=True)
-        st.title("Will you be my Valentine?")
+        st.image("snoopy-hugging-woodstock.jpg", use_column_width=True)
+        st.title("Claire, will you be my Valentine?")
         
         col1, col2 = st.columns([1,1])
         with col1:
@@ -29,7 +29,7 @@ def main():
                 st.experimental_rerun()
             
     else:
-        st.image("happy_photo.jpg", use_column_width=True)
+        st.image("snoopy-cheering.jpg", use_column_width=True)
         st.title("Yay! Happy Valentine's Day! 💕")
         st.write("You made the right choice! 😊")
 
